@@ -2,18 +2,54 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>文件移动</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+  <div class="card ">
+    <div class="card-header text-center">
+      <h3>文件移动</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <label for="file_list">1.请上传文件列表(xlsx/txt格式)：
+          </label>
+          <input type="file" id="file_list">
+        </li>
+        <li class="list-group-item">
+          <label for="source_folder">2.请选择查找的文件夹：
+            <input type="file" id="source_folder" value="C:\Users\guozhenjiang\Desktop\test\sourseFile"  webkitdirectory >
+          </label>
+        </li>
+        <li class="list-group-item">
+          <label for="target_folder">3.请选择文件移动的目标文件夹：
+            <input  type="file" id="target_folder"  webkitdirectory>
+          </label>
+        </li>
 
+      </ul>
+    </div>
+    <div class="card-footer text-center">
+          <button class="btn btn-success" id="startTask">开始</button>
+    </div>
+    <div class="progress " id="progress-bar" style="width: 100%"></div>
+
+  </div>
+
+
+
+
+    <!--<label for=""></label>-->
+    
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+        window.$ = window.jQuery = require('jquery');
     </script>
+    <script>require('electron-connect').client.create()</script>
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+    </script>
+
   </body>
 </html>

@@ -1,3 +1,12 @@
+#转成exe文件流程
+-注释main.js 里的  mainWindow.webContents.openDevTools() 打开调试窗口命令 
+-注释index.html 里的     <script>require('electron-connect').client.create()</script> 实时更新方法
+-npm run built
+
+#打开开发模式
+-npm run dev
+
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
