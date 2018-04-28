@@ -6,3 +6,4 @@
 - 注释main.js 里的  mainWindow.webContents.openDevTools() 打开调试窗口命令 
 - 注释index.html 里的     <script>require('electron-connect').client.create()</script> 实时更新方法
 - `npm run built`
+
